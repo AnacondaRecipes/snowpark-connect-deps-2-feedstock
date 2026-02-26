@@ -1,5 +1,5 @@
 {% set name = "snowpark-connect-deps-2" %}
-{% set version = "3.56.3" %}
+{% set version = "3.56.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_')}}-{{ version }}.tar.gz
-  sha256: 2a2a321295ac5f96b65281c93eac39a8198f32f92a90326daf7c66635a7d2aab
+  sha256: 7e4582d158ddc7f69a630095a34aad7441c6e59ec61a70612d31a162a6636dba
 
 build:
-  number: 101
+  number: 100
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<310 or py>312]
 
